@@ -9,28 +9,48 @@ def basic_validation(text):
 
 def tokenize(text):
     arr = []
+    print("text==")
+    print(text)
     symbols = ["[","]","{","}"]
-    for i, item in enumerate(text):
+    #for i, item in enumerate(text):
+    i = -1
+    while(i<len(text)-1):
+        i += 1
+        item = text[i]
         # print("test=", item)
+        print("current s to token=", item, "i=", i)
         if item in symbols:
+            print("appending 0")
             arr.append(item)
             continue
 
         if (i + 4 < len(text)):
                 if text[i:i+4] == '"*":':
+                    print("appending 1")
                     arr.append('"*":')
-                    i = i + 4
+                    i = i + 3
                     continue
                 else:
                     if text[i:i+4] == '"*",':
-                        i = i + 3
+                        i = i + 2
+                        print("appending 2")
                         arr.append('"*",')
 
         if (i + 3 < len(text)):
                 if (text[i:i+3] == '"*"'):
-                        i = i + 2
+                        i = i + 1
+                        print("appending 3")
                         arr.append('"*"')
                         continue
+
+        if (text[i] == "*"):
+            print("appending 4")
+            arr.append("*")
+            continue
+
+        raise Exception("invalid json")    
+
+    print("TOKENs=")
     print(arr)
     return arr
 
@@ -47,6 +67,7 @@ def json_parser(text):
             '}':'{',
             '"*"':'"*":',
             '"*",':'"*":',
+            '*':'"*":',
             ']':'['
             }
     closing_list = {
@@ -92,25 +113,14 @@ def json_parser(text):
         else:
             print("--in list--")
             if item in closing_list and arr[-1] == closing_list[item]:
-                print("--found''")
-                print("removing from list", arr[-1], item)
                 arr.pop()
-            else:
-                print("adding item")
+            elif item == "[":
+                print("appending item")
                 arr.append(item)
-                
-    print("----POST----")
-    print(arr)
-
-    #er i in range(0, len(text)):
-    #for i in range(0, len(text)):
-    #    c = text[i]
-    #    print(i, text[i])
-    #    if (c not in closing):
-    #        arr.append(c)
-    #    else:
-    #        arr.pop()
-    # last test
+            else:
+                print("ignoring item")
+                # arr.append(item)
+    print("POST")
     print(arr)
     return True
 
@@ -118,7 +128,10 @@ def json_parser(text):
 
 
 if __name__ == '__main__':
-    sample = '{"key1" : 123}'
+    #sample = '{"key1" : 123}'
+    sample = '{"key1" : [1,2]}'
     #sample = '{"key1" : "value1", "key2" : ["value2", "value3"], "key3" : { "subkey1" : "123" }, "key4":["x"] }'
     #sample = '{"key1" : "value1", "key2" : ["value2", "value3"], "key3" : { "subkey1" : "123" } }'
+    #sample = '{"key1" : "value1", "key2" : ["value2", "value3"], "key3" : { "subkey1" : 123 } }'
+    #sample = '{"key0":{"key1" : "value1", "key2" : [], "key3" : {} }}}'
     assert(json_parser(sample) == True)

@@ -80,6 +80,13 @@ with precise language what was the requirement.
 > function cannot process the input.
 > 
 
+Kindly see the following test:
+
+> https://github.com/L271828R/broadridge/blob/main/problem_2/test_vendingmachine.py
+
+
+
+
 ## Problem 3:
 
 > We are testing a service product that allows two ways for customers to interact with

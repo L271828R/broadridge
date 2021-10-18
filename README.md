@@ -106,7 +106,7 @@ Kindly see the following test:
 > REST service dependencies: [sso service REST], [market data REST] ] 
 > 
 
-# Database problem
+## Database problem
 
 For not calling on the actual database dependencies I would mock/stub the objects
 that call the database have objects return deterministic data. 
@@ -129,7 +129,7 @@ Addition info:
 https://circleci.com/blog/how-to-test-software-part-i-mocking-stubbing-and-contract-testing/
 
 
-# Service Problem
+## Service Problem
 
 For not calling on the actual restful services, I would implement a ip:port stubbing
 service like "wiremock". In essence it is process that lives next to the main process

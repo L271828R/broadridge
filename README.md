@@ -50,7 +50,8 @@ And I have a more complete solution where:
 
 * Proper JSON rules are followed and the content of both dictionaries and lists are validated.
 * JSON needs to start with "{" and finish with "}" 
-* for the above 'symbols' only mean: "[", "]", "{", "}", ":", ","
+* Here symbols mean: "[", "]", "{", "}", ":", ","
+* Incorrectly formatted JSON such as '{"key"::"value"}'
 
 > https://github.com/L271828R/broadridge/blob/main/problem_1/json_parser.py
 > https://github.com/L271828R/broadridge/blob/main/problem_1/test_json.py

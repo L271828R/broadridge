@@ -107,9 +107,8 @@ Kindly see the following test:
 * Requirement 2: "how do you design your project framework so that you do not have to interact with those databases and external systems?
 
 
-> [ [user_data_db], [company_data_db], [activity_db] ] 
->                                                        [ Product Service ]
-> [ [sso service REST], [market data REST] ] 
+> Database dependencies: [ [user_data_db], [company_data_db], [activity_db] ] 
+> REST service dependencies: [sso service REST], [market data REST] ] 
 
 
 

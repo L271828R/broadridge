@@ -5,7 +5,7 @@ def test_happypath0():
     s = '{"key":"value"}'
     assert(json_parser(s) == True)
 
-def test_happypath():
+def test_happypath1():
     s = '{"key1" : 123 }'
     assert(json_parser(s) == True)
 

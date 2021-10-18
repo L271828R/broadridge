@@ -1,5 +1,4 @@
 
-
 ## Problem 1: 
 
 > Using the language of your choice, write a function that validates a JSON string is
@@ -103,3 +102,15 @@ Kindly see the following test:
 > framework do not have to write their code for interacting with those databases and external
 > systems? No code is required for this answer, but be specific about where the code would live
 > and how the frameworks would use that code.
+
+* Requirement 1: "we want each of them to have access to the underlying databases and dependencies the product uses so that we can verify the data coming from product"
+* Requirement 2: "how do you design your project framework so that you do not have to interact with those databases and external systems?
+
+
+ > [ [user_data_db], [company_data_db], [activity_db] ] 
+ >                                                        > [ Product Service ]
+ >[ [sso service REST], [market data REST] ] 
+
+
+
+

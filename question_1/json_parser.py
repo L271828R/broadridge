@@ -8,22 +8,7 @@ def log(s, flag):
         print(s)
 
 
-def parse_token(list_of_tokens):
-    pass
-
-
-
-def json_parser(text, logging=False):
-    text = text.replace(" ", "")
-    text = text.replace("“", '"')
-    text = text.replace("“", '"')
-    text = text.replace("”", '"')
-    text = re.sub('[0-9a-zA-Z]+', '*', text)
-    log(text, logging)
-    if (not is_basic_validation(text)):
-        return False
-    log(text, logging)
-    list_of_tokens = tokenize(text)
+def parse_tokens(list_of_tokens, logging):
     arr = [] # stack
     closing_dic = {
             '}':'{',
@@ -79,9 +64,24 @@ def json_parser(text, logging=False):
                 log("ignoring item", logging)
     log("POST", logging)
     log(arr, logging)
+    return arr
+
+def sanitize_text(text):
+    text = text.replace(" ", "")
+    text = text.replace("“", '"')
+    text = text.replace("“", '"')
+    text = text.replace("”", '"')
+    text = re.sub('[0-9a-zA-Z]+', '*', text)
+    return text
+
+def json_parser(text, logging=False):
+    text = sanitize_text(text)
+    if (not is_basic_validation(text)):
+        return False
+    log(text, logging)
+    list_of_tokens = tokenize(text)
+    arr = parse_tokens(list_of_tokens, logging)
     return True if len(arr) == 0 else False
-
-
 
 
 if __name__ == '__main__':

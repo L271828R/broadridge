@@ -106,10 +106,11 @@ Kindly see the following test:
 * Requirement 1: "we want each of them to have access to the underlying databases and dependencies the product uses so that we can verify the data coming from product"
 * Requirement 2: "how do you design your project framework so that you do not have to interact with those databases and external systems?
 
-
+>
 > Database dependencies: [ [user_data_db], [company_data_db], [activity_db] ] 
+> 
 > REST service dependencies: [sso service REST], [market data REST] ] 
-
+> 
 
 
 

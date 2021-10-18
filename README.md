@@ -113,10 +113,13 @@ that call the database have objects return deterministic data.
 
 For example:
 
-db = Mock(DataBase("user","password","connectionstring")) // Mocking the object
-db.result_set = ["user1", "user2", "..."]  // stubbing the data with expected results
-productService = ProductService()
-productService.get_userdata(db) // passing mocked/stubbed object via injection
+> db = Mock(DataBase("user","password","connectionstring")) // Mocking the object
+>
+> db.result_set = ["user1", "user2", "..."]  // stubbing the data with expected results
+>
+> productService = ProductService()
+>
+> productService.get_userdata(db) // passing mocked/stubbed object via injection
     
 Where does this live?:
 Code mocking would like inside the test framework as a utility module.

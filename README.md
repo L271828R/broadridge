@@ -108,9 +108,7 @@ Kindly see the following test:
 
 
 > [ [user_data_db], [company_data_db], [activity_db] ] 
->
->                                                        > [ Product Service ]
->
+>                                                        [ Product Service ]
 > [ [sso service REST], [market data REST] ] 
 
 

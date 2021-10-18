@@ -1,7 +1,9 @@
 import pytest
 from json_parser import json_parser
 
-
+def test_happypath0():
+    s = '{"key":"value"}'
+    assert(json_parser(s) == True)
 
 def test_happypath():
     s = '{"key1" : 123 }'

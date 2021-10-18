@@ -85,8 +85,11 @@ def json_parser(text, logging=False):
 
 
 if __name__ == '__main__':
-    sample = '{ “key1” : “value1”, “key2” : [“value2”, “value3”], “key3” : { “subkey1” : 123 } }'
-    print("1" , json_parser(sample, logging=False)) 
+    # sample = '{ “key1” : “value1”, “key2” : [“value2”, “value3”], “key3” : { “subkey1” : 123 } }'
+    # print("1" , json_parser(sample, logging=False)) 
+    import sys
+    s = sys.argv[1]
+    print(json_parser(s))
 
 
 

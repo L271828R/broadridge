@@ -20,10 +20,7 @@
 Unfortunately I was not able to understand fully the ask. Points of confusion 
 was the phrase:
 
-> The function should use these assumptions regarding the JSON string:
-> • A JSON object is encapsulated in {} curly braces and includes a comma-separated list of
-> • A JSON array is encapsulated in [] square braces and includes a comma-separated list of
-> • A key-value pair is in the format of “key”:value where key is always a quoted string and
+> The function should use these assumptions regarding the JSON string: ...
 
 I do not know what it means for a function to 'use' an assumption.
 Does it mean I need to validate these assumptions?
@@ -37,7 +34,7 @@ the content of key/values?
 
 Also importantly the word 'symbols' was not defined
 
-Thus, I have a very simplistic program and its accompaying unit tests:
+Nonetheless, I have a very simplistic program and its accompaying unit tests:
 
 > https://github.com/L271828R/broadridge/blob/main/problem_1/json_parser_simple.py
 > https://github.com/L271828R/broadridge/blob/main/problem_1/test_json_simple.py
@@ -58,9 +55,8 @@ Additionally, I have a more complete solution where:
 > https://github.com/L271828R/broadridge/blob/main/problem_1/json_parser.py
 > https://github.com/L271828R/broadridge/blob/main/problem_1/test_json.py
 
-It was not my intention to do more work. I sincerely could not understand
-with precise language what was the requirement.
-
+I hope somewhere between the two examples I provided I was able to fulfull the requirement.
+Thank you.
 
 ## Problem 2: 
 
@@ -81,10 +77,8 @@ with precise language what was the requirement.
 
 Kindly see the following test:
 
+> https://github.com/L271828R/broadridge/blob/main/problem_2/vending_machine.py
 > https://github.com/L271828R/broadridge/blob/main/problem_2/test_vendingmachine.py
-
-
-
 
 ## Problem 3:
 

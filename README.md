@@ -124,6 +124,10 @@ For example:
 Where does this live?:
 Code mocking would like inside the test framework as a utility module.
 
+Addition info:
+
+https://circleci.com/blog/how-to-test-software-part-i-mocking-stubbing-and-contract-testing/
+
 
 # Service Problem
 
@@ -138,6 +142,8 @@ Where does this live?:
 The wiremock service would be a deamon or a background process as part of the OS that hosts
 the testing suite.
 
+Additional info:
 
+http://wiremock.org/
 
 

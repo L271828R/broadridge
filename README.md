@@ -45,18 +45,22 @@ Thus, I have a very simplistic program and its accompaying unit tests:
 
 for the above 'symbols' only mean: "[", "]", "{", "}"
 
+For the above I showcase the basic workings of a stack object as would be asked
+from a begginner level 'HackerRank' or "Leetcode' testing challange.
+
 
 And I have a more complete solution where:
 
 * Proper JSON rules are followed and the content of both dictionaries and lists are validated.
 * JSON needs to start with "{" and finish with "}" 
 * Here symbols mean: "[", "]", "{", "}", ":", ","
-* Incorrectly formatted JSON such as '{"key"::"value"}'
+* Incorrectly formatted JSON such as '{"key"::"value"}' will return false
 
 > https://github.com/L271828R/broadridge/blob/main/problem_1/json_parser.py
 > https://github.com/L271828R/broadridge/blob/main/problem_1/test_json.py
 
-
+It was not my intention to do more work. I sincerely could not understand
+with precise language what was the requirement.
 
 
 

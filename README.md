@@ -112,5 +112,35 @@ Kindly see the following test:
 > REST service dependencies: [sso service REST], [market data REST] ] 
 > 
 
+# Database problem
+
+For not calling on the actual database dependencies I would mock/stub the objects
+that call the database have objects return deterministic data. 
+
+For example:
+
+db = Mock(DataBase("user","password","connectionstring")) // Mocking the object
+db.result_set = ["user1", "user2", "..."]  // stubbing the data with expected results
+productService = ProductService()
+productService.get_userdata(db) // passing mocked/stubbed object via injection
+    
+Where does this live?:
+Code mocking would like inside the test framework as a utility module.
+
+
+# Service Problem
+
+For not calling on the actual restful services, I would implement a ip:port stubbing
+service like "wiremock". In essence it is process that lives next to the main process
+you are testing and it listens for a certain IP:port (ie: 134.12.1231.00:3000/get_sso&user=user1 )
+
+The wireock service would listen for certain REST verbs and endpoints and return
+deterministic data.
+
+Where does this live?:
+The wiremock service would be a deamon or a background process as part of the OS that hosts
+the testing suite.
+
+
 
 

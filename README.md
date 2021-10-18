@@ -46,10 +46,10 @@ Thus, I have a very simplistic program and its accompaying unit tests:
 for the above 'symbols' only mean: "[", "]", "{", "}"
 
 For the above I showcase the basic workings of a stack object as would be asked
-from a begginner level 'HackerRank' or "Leetcode' testing challange.
+from a beginner level 'HackerRank' or "Leetcode' testing challange.
 
 
-And I have a more complete solution where:
+Additionally, I have a more complete solution where:
 
 * Proper JSON rules are followed and the content of both dictionaries and lists are validated.
 * JSON needs to start with "{" and finish with "}" 
@@ -61,9 +61,6 @@ And I have a more complete solution where:
 
 It was not my intention to do more work. I sincerely could not understand
 with precise language what was the requirement.
-
-
-
 
 
 ## Problem 2: 

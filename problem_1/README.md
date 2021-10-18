@@ -7,8 +7,11 @@
 Important. Please wrap all strings passed via command line in single quotes.
 
 > python json_parser.py '{"key":"value"}'
+>
 > True
+>
 > python json_parser.py '{"key":["a","4",5]}'
+>
 > True
 
 ## Running tests

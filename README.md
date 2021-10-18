@@ -132,7 +132,7 @@ Code mocking would like inside the test framework as a utility module.
 
 For not calling on the actual restful services, I would implement a ip:port stubbing
 service like "wiremock". In essence it is process that lives next to the main process
-you are testing and it listens for a certain IP:port (ie: 134.12.1231.00:3000/get_sso&user=user1 )
+you are testing and it listens for a certain IP:port (ie: 192.168.1.67:3000/get_sso&user=user1 )
 
 The wireock service would listen for certain REST verbs and endpoints and return
 deterministic data.
